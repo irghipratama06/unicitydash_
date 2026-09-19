@@ -1,0 +1,80 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f7f7f7;
+  background: #101015;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #101015; }
+button { font: inherit; }
+.app-shell { width: min(1120px, 100%); margin: 0 auto; padding: 20px 16px 34px; }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:8px 0 18px; }
+.eyebrow { font-size:10px; letter-spacing:.18em; opacity:.62; font-weight:800; }
+h1,h2,p { margin:0; }
+h1 { font-size:34px; line-height:.95; letter-spacing:-.06em; }
+.wallet-button,.deposit-button,.overlay-card button { border:0; cursor:pointer; font-weight:900; letter-spacing:.02em; }
+.wallet-button { background:#f7f7f7; color:#101015; border-radius:999px; padding:12px 16px; }
+.wallet-button:disabled,.deposit-button:disabled,.overlay-card button:disabled { opacity:.45; cursor:not-allowed; }
+.hero { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:12px; }
+.hud-card { background:#19191f; border:1px solid #2c2c35; border-radius:16px; padding:13px 14px; }
+.hud-card span { display:block; font-size:10px; letter-spacing:.15em; opacity:.5; font-weight:800; }
+.hud-card strong { display:block; margin-top:3px; font-size:22px; letter-spacing:-.04em; }
+.game-panel { background:#19191f; border:1px solid #2c2c35; border-radius:22px; padding:10px; overflow:hidden; }
+.game-labels { display:flex; justify-content:space-between; padding:3px 5px 9px; font-size:11px; letter-spacing:.15em; font-weight:900; opacity:.75; }
+.canvas-wrap { position:relative; height:min(55vw,430px); min-height:330px; border-radius:15px; overflow:hidden; touch-action:none; background:#242432; }
+canvas { width:100%; height:100%; display:block; }
+.preload-character { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
+.game-overlay { position:absolute; inset:0; display:grid; place-items:center; background:rgba(10,10,15,.28); padding:20px; }
+.overlay-card { width:min(440px,92%); background:rgba(17,17,22,.92); border:1px solid rgba(255,255,255,.15); border-radius:20px; padding:24px; text-align:center; backdrop-filter:blur(12px); }
+.mini-tag { font-size:10px; letter-spacing:.18em; font-weight:900; opacity:.6; }
+.overlay-card h2 { margin:10px 0 8px; font-size:28px; line-height:.95; letter-spacing:-.05em; }
+.overlay-card p { opacity:.7; font-size:13px; margin-bottom:18px; }
+.overlay-card button { padding:13px 20px; border-radius:999px; background:#f26b21; color:#fff; }
+.mobile-hint { padding:9px 3px 2px; text-align:center; font-size:10px; letter-spacing:.14em; opacity:.45; }
+.action-row { display:flex; gap:10px; align-items:center; margin:12px 0 20px; }
+.deposit-button { background:#f26b21; color:#fff; padding:13px 17px; border-radius:14px; white-space:nowrap; }
+.status { font-size:12px; opacity:.7; }
+.leaderboard-section { margin-top:18px; }
+.section-heading { display:flex; align-items:end; justify-content:space-between; gap:12px; margin-bottom:10px; }
+.section-heading h2 { font-size:28px; letter-spacing:-.05em; }
+.section-heading > span { font-size:10px; opacity:.45; letter-spacing:.14em; }
+.leaderboard { background:#19191f; border:1px solid #2c2c35; border-radius:18px; overflow:hidden; }
+.leader-row { display:grid; grid-template-columns:54px 1fr auto; align-items:center; gap:12px; padding:14px 16px; border-bottom:1px solid #2a2a31; }
+.leader-row:last-child { border-bottom:0; }
+.leader-row b { opacity:.5; }
+.leader-row span { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; }
+.leader-row strong { font-size:17px; }
+.empty { padding:25px; text-align:center; opacity:.5; }
+footer { display:flex; justify-content:space-between; padding:22px 3px 0; font-size:10px; letter-spacing:.12em; opacity:.4; }
+@media (max-width:700px) {
+  .app-shell { padding:12px 10px 24px; }
+  h1 { font-size:28px; }
+  .wallet-button { padding:10px 13px; font-size:12px; }
+  .hero { gap:7px; }
+  .hud-card { padding:10px; border-radius:13px; }
+  .hud-card strong { font-size:17px; }
+  .canvas-wrap { height:74vw; min-height:320px; max-height:470px; }
+  .action-row { align-items:stretch; flex-direction:column; }
+  .deposit-button { width:100%; }
+  .status { text-align:center; }
+  .section-heading { align-items:start; flex-direction:column; }
+  footer { flex-direction:column; gap:6px; }
+}
+
+
+.verify-button {
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
+  color: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.verify-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
